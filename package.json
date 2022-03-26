@@ -1,0 +1,27 @@
+{
+  "name": "bench-rest-test",
+  "version": "1.0.0",
+  "description": "Bench Coding Assessment",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scs97liu/studious-engine.git"
+  },
+  "author": "Shane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scs97liu/studious-engine/issues"
+  },
+  "homepage": "https://github.com/scs97liu/studious-engine#readme",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "axios": "^0.26.1"
+  }
+}
