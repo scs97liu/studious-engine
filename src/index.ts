@@ -1,41 +1,11 @@
-import axios from 'axios';
+import { dailyBalanceInterface } from './interfaces';
+import { fetchDB, calculateBalance } from './functions';
 
-const app = async (): Promise<void> => {
-    const count: Number = await getTotalCount();
-    var currentCount: number = 0;
-    const data: Map<String, Number> = new Map();
-    var page: number = 1
-
-    while (currentCount < count){
-        try{
-            const response = await axios.get(`https://resttest.bench.co/transactions/${page}.json`)
-            response.data.transactions.map( entry => {
-                if (data.has(entry.Date)){
-                    data.set(entry.Date, Number(data.get(entry.Date)) + Number(entry.Amount))
-                } else {
-                    data.set(entry.Date, Number(entry.Amount))
-                }
-                currentCount++;
-            })
-            page++
-        } 
-        catch (e){
-            console.log(e)
-        }
-    }
-
-    console.log(data);
+const printDailyBalance = async (): Promise<Map<String, Number>> => {
+    const db: dailyBalanceInterface[] = await fetchDB();
+    const dailyBalanceSheet: Map<String, Number> = calculateBalance(db);
+    console.log(dailyBalanceSheet);
+    return dailyBalanceSheet;
 }
 
-
-const getTotalCount = async (): Promise<Number> => {
-    try{
-        const response = await axios.get('https://resttest.bench.co/transactions/1.json');
-        return response.data.totalCount;
-    }
-    catch (e){
-        console.log(e);
-    }
-}
-
-app();
+printDailyBalance();
