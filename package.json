@@ -4,8 +4,8 @@
   "description": "Bench Coding Assessment",
   "main": "dist/index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "test": "jest"
+    "start": "npx tsc && node dist/index.js",
+    "test": "npx tsc && jest"
   },
   "repository": {
     "type": "git",

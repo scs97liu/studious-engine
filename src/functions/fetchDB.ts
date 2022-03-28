@@ -13,8 +13,9 @@ export const fetchDB = async (): Promise<dailyBalanceInterface[]> => {
                 db.push(entry);
             })
         }
-        catch (e){
-            console.log(e);
+        catch (err){
+            console.log('Could not fetch DB:');
+            console.log(err);
         }
         page++
     }
