@@ -1,5 +1,6 @@
 import { dailyBalanceInterface } from './interfaces';
-import { fetchDB, calculateBalance } from './functions';
+import { fetchDB } from './functions/fetchDB';
+import { calculateBalance } from './functions/calculateBalance';
 
 const printDailyBalance = async (): Promise<Map<String, Number>> => {
     const db: dailyBalanceInterface[] = await fetchDB();
