@@ -26,12 +26,16 @@ export const calculateBalance = (db: dailyBalanceInterface[]): Map<String, Numbe
     const dataMap = new Map();
     db.map(entry => {
         if (dataMap.has(entry.Date)){
-            dataMap.set(entry.Date, Number(dataMap.get(entry.Date)) + Number(entry.Amount))
+            dataMap.set(entry.Date, stringToDecimal(dataMap.get(entry.Date) + Number(entry.Amount)))
         } else {
-            dataMap.set(entry.Date, Number(entry.Amount))
+            dataMap.set(entry.Date, stringToDecimal(entry.Amount))
         }
     })
     return dataMap;
+}
+
+export const stringToDecimal = (stringNumber: string): Number => {
+    return Number(Number(stringNumber).toFixed(2));
 }
 
 export const getTotalCount = async (): Promise<Number> => {
