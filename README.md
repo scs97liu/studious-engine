@@ -1,21 +1,20 @@
 # Bench Coding Assessment
 Pre-requisites:
 [NodeJS](https://nodejs.org/en/download/)
----
+
 ## To run locally:
 After cloning the repo, in the root directory of the repo follow the commands below:
 1. `npm install`
 2. `npm run start`
+3. Daily balance data should appear on console
 
-Result data should appear on console
----
 ## To run tests:
 In the root directory run:
 `npm run test`
----
 
-### Description:
-- Coding assessment written in NodeJS (Typescript)
+## Description:
+- Coding assessment written in NodeJS (Typescript)]
+- `index.ts` is the entry point of the app and is run when we execute `npm run start`
 - `src/functions` folder consists of the functions developed for the assessment
 - `src/tests` folder consists of the unit tests for the assessment
 - `mockData.ts` consists of mock information used for unit tests
@@ -31,5 +30,3 @@ This functions takes in a numeric string and returns it with type number rounded
 
 ### What could be better:
 - Could cover more test cases for unit tests
-
----
