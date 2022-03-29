@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { fetchDB } from '../functions/fetchDB';
 
-import { mockResponse, mockResponse2, mockResultDB } from './mockData';
+import { mockResponse, mockResponse2, mockResultDB } from '../mockData';
 
 describe ('function: fetchDB', () => {
     describe("when API call is successful", () => {
