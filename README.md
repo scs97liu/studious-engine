@@ -8,7 +8,7 @@ Pre-requisites:
 
 Result data should appear on console
 ---
-##To run tests:
+## To run tests:
 `npm run test`
 ---
 
