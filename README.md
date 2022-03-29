@@ -3,12 +3,14 @@ Pre-requisites:
 [NodeJS](https://nodejs.org/en/download/)
 ---
 ## To run locally:
+After cloning the repo, in the root directory of the repo follow the commands below:
 1. `npm install`
 2. `npm run start`
 
 Result data should appear on console
 ---
 ## To run tests:
+In the root directory run:
 `npm run test`
 ---
 
